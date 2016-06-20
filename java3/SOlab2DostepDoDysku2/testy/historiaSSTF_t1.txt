@@ -1,0 +1,20 @@
+Z 1 DO 2 wykonano w 5
+Z 2 DO 85 wykonano w 6
+Z 85 DO 121 wykonano w 7
+Z 121 DO 130 wykonano w 8
+Z 130 DO 139 wykonano w 9
+Z 139 DO 40 wykonano w 10
+Z 40 DO 67 wykonano w 11
+Z 67 DO 46 wykonano w 13
+Z 46 DO 136 wykonano w 15
+Z 136 DO 144 wykonano w 16
+Z 144 DO 76 wykonano w 17
+Z 76 DO 122 wykonano w 19
+Z 122 DO 82 wykonano w 20
+Z 82 DO 60 wykonano w 23
+Z 60 DO 141 wykonano w 24
+Z 141 DO 20 wykonano w 26
+Z 20 DO 145 wykonano w 29
+Z 145 DO 28 wykonano w 31
+Z 28 DO 104 wykonano w 8
+Suma przesuniec: 1079

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;iloczyn&apos; in &apos;Zbiory.Zbior.AminusB(...)&apos; to &apos;roznica&apos;&#x0D;&#x0A;- Original project: &apos;MatematykaDyskretna&apos;&#x0D;&#x0A;- Original element: &apos;Zbiory.Zbior.AminusB(Zbior).iloczyn&apos;&#x0D;&#x0A;- Renamed element: &apos;iloczyn&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;iloczyn&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;Zbiory{Zbior.java[Zbior~AminusB~QZbior;@iloczyn!1020!1036!1027!1033!D!0!false" name="roznica" references="true" stamp="1460104352522" version="1.0"/>
+</session>

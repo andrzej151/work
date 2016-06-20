@@ -1,0 +1,132 @@
+package Procesy;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.Scanner;
+
+public class Lista {
+	
+	private int [] czaszgloszenia;
+	private int [] czastrwania;
+	private int licznik;
+	public int iloscprocesow;
+	
+	public Lista()
+	{
+		czastrwania=new int[100];
+		czaszgloszenia=new int[100];
+		licznik=0;
+	}
+	
+	public int[] procesyzczasu(int czas)
+	{
+		int [] indexy=new int[licznik+1];//ilosc procesow //indexy procesow
+		int i=0,l=0;
+		while(i<licznik)
+		{
+			if(czaszgloszenia[i]==czas)
+			{
+				indexy[l+1]=i;
+				l++;
+			}
+			i++;
+		}
+		indexy[0]=l;
+		return indexy;
+		
+	}
+	
+	public void dodajproces(int czzgloszenia,int cztrwania)
+	{
+	
+		if(czzgloszenia>0&&cztrwania>0)
+		{
+			czaszgloszenia[licznik]=czzgloszenia;
+			czastrwania[licznik]=cztrwania;
+			licznik++;
+		}
+		else
+		{
+			System.out.println("zle dane");
+		}
+	}
+	
+	public void wyswietl()
+	{
+		System.out.println("Lista procesow dodanych do symulacji");
+		for(int i=0;i<licznik;i++)
+		{
+			System.out.println("Proces "+i+" trwa "+czastrwania[i]+" zgloszony zostal w "+czaszgloszenia[i]+" [j] trwania symulacji");
+		}
+		System.out.println("...............................");
+		System.out.println();
+	}
+	
+	public void odczyt()
+	{
+		Scanner odczyt= new Scanner(System.in);
+		System.out.println("Podaj nazwe pliku");
+		String nazwa=odczyt.next();
+		
+		try {
+			odczyt=new Scanner(new File(nazwa));
+			int ilosc=odczyt.nextInt();
+			licznik=0;
+		
+			for(int i=0;i<ilosc;i++)
+			{			
+				dodajproces(odczyt.nextInt(), odczyt.nextInt());
+			}	
+			odczyt.close();
+			
+			if(licznik==ilosc)
+			{
+				System.out.println("Wczytanie powiodlo sie");
+			}
+			else
+			{
+				System.out.println("Blad ziezgadza sie suma kontrolna");
+			}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public void zapisz()
+	{
+		Scanner odczyt= new Scanner(System.in);
+		System.out.println("Podaj nazwe pliku");
+		String nazwa=odczyt.next();
+		
+		try {
+			PrintWriter zapis = new PrintWriter(nazwa);
+			zapis.println(licznik);
+			for (int i = 0; i < licznik; i++) {
+				zapis.println(czaszgloszenia[i]+" "+czastrwania[i]);
+			}
+			zapis.close();
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();}
+	}
+		
+	public int getczastrwania(int index)
+	{
+		return czastrwania[index];
+	}
+	
+	public int getczaszg³oszenia(int index)
+	{
+		return czaszgloszenia[index];
+	}
+
+	public int iloscprocesow() {
+		// TODO Auto-generated method stub
+		return licznik;
+	}
+	
+	
+}

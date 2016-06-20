@@ -1,0 +1,16 @@
+Z 1 DO 8
+Z 8 DO 14
+Z 14 DO 45
+Z 45 DO 6
+Z 6 DO 47
+Z 47 DO 35
+Z 35 DO 15
+Z 15 DO 30
+Z 30 DO 38
+Z 38 DO 4
+Z 4 DO 2
+Z 2 DO 41
+Z 41 DO 27
+Z 27 DO 28
+Z 28 DO 32
+Suma przesuniec: 273

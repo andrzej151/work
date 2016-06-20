@@ -1,0 +1,11 @@
+Z 1 DO 10
+Z 10 DO 36
+Z 36 DO 41
+Z 41 DO 15
+Z 15 DO 35
+Z 35 DO 20
+Z 20 DO 22
+Z 22 DO 48
+Z 48 DO 41
+Z 41 DO 7
+Suma przesuniec: 170

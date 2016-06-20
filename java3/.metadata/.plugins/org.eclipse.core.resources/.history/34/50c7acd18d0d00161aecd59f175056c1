@@ -1,0 +1,232 @@
+package Drzewa;
+
+public class Drzewo {
+	private Node _root;
+	private int liscie, wz, ww;
+	public Drzewo()
+	{
+		
+	}
+	public void insert(int x)
+    {
+		System.out.println(x);
+		_root= insert(x,_root); }
+    
+    protected Node insert(int x, Node t) {
+      if(t== null) t=new Node(x);
+      else 
+      { 
+    	 
+             if(x<t.value) t.left=insert(x,t.left);
+             else if(x>t.value) t.right=insert(x,t.right);
+			else
+				try {
+					throw new Exception("jest juz taki klucz");
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+            }       
+      return t;
+  }
+
+    public Object find(int x)
+    {
+    	Node t = search(x);
+    	return t !=null ? t.value : null;
+    }
+    
+    public void findnext(int klucz) {
+    	Node t = search(klucz);
+    	System.out.println("po kluczu "+(t!=null ? t.value : null)+" jest "+(t.left!=null ? t.left.value : null)+" i "+(t.right!=null ? t.right.value : null));
+		
+	}
+    
+    public Object findpop(int x)
+    {
+    	Node t = searchpop(x);
+    	return t !=null ? t.value : null;
+    }
+    
+    private Node search(int value) {
+        Node node = _root;
+        int cmp=0;
+        while (node != null &&(cmp = value-node.value)!=0)
+           node = cmp < 0 ? node.left : node.right;
+         return node;
+    }
+
+    public void wyswietlin()
+    {
+    	wyswietlin(_root);
+    }
+    private void wyswietlin(Node n) {
+       if(n.left!=null)
+    	wyswietlin(n.left);
+    	System.out.println(n.value);
+    	if(n.right!=null)
+    	wyswietlin(n.right);
+    }
+   
+    public void wyswietlpre()
+    {
+    	wyswietlpre(_root);
+    }
+    private void wyswietlpre(Node n) {
+    	if(n!=null)System.out.println(n.value); 
+      	if(n.left!=null)
+    	wyswietlpre(n.left);
+    	if(n.right!=null)
+    	wyswietlpre(n.right);
+    }
+    
+    public int liscie()
+    {
+    	liscie=0;
+    	liscie(_root);
+    	return liscie;
+    }
+    private void liscie(Node n) {
+    	if(n.left==null&&n.right==null)liscie++;
+      	if(n.left!=null)
+    	liscie(n.left);
+    	if(n.right!=null)
+    	liscie(n.right);
+    }
+    
+    public int wezlyzewnetrzne()
+    {
+    	wz=0;
+    	wezlyzewnetrzne(_root);
+    	return wz;
+    }
+    private void wezlyzewnetrzne(Node n) {
+    	if(n.left==null)wz++;
+    	if(n.right==null)wz++;
+      	if(n.left!=null)
+    	wezlyzewnetrzne(n.left);
+    	if(n.right!=null)
+    	wezlyzewnetrzne(n.right);
+    }
+    
+    public int wezlywew()
+    {
+    	ww=0;
+    	wezlywew(_root);
+    	return ww;
+    }
+    private void wezlywew(Node n) {
+    	if(!(n.left==null&&n.right==null))ww++;
+      	if(n.left!=null)
+    	wezlywew(n.left);
+    	if(n.right!=null)
+    	wezlywew(n.right);
+    }
+        
+    public void wyswietlpost()
+    {
+    	wyswietlpost(_root);
+    }
+    private void wyswietlpost(Node n) {
+    	
+      	if(n.left!=null)
+    	wyswietlpost(n.left);
+    	if(n.right!=null)
+    	wyswietlpost(n.right);
+    	if(n!=null)System.out.println(n.value); 
+    }
+    private Node searchpop(int value) {
+        Node node = _root;
+        Node nodepop = null;
+        int cmp=0;
+        while (node != null &&(cmp = value-node.value)!=0)
+        {
+        	nodepop=node;
+           node = cmp < 0 ? node.left : node.right;
+           
+        }
+         return nodepop;
+    }
+
+    public void delete(int x)
+    {_root=delete(x,_root); }
+    
+    protected Node delete(int x, Node t) {
+      if(t==null)
+		try {
+			throw new Exception("blad");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	else { 
+             if(x<t.value) t.left=delete(x,t.left);
+             else if(x>t.value) t.right=delete(x,t.right);
+                  else if(t.left!=null &&t.right!=null)
+                            t.right=detachMin(t.right,t); 
+                       else  t = (t.left != null) ? t.left : t.right;
+            }           
+      return t;
+    }  
+   
+//zast¹p usuwany element jego nastêpnikiem i usuñ nastêpnik
+  
+    protected Node detachMin(Node t, Node del) {
+      if(t.left!=null) t.left=detachMin(t.left,del);   
+      else {del.value=t.value; t=t.right;}
+      return t;
+    }  
+
+    
+    
+    //pomocnicza klasa node
+     class Node
+     {
+    	 private int value;
+    	   private Node left;
+    	   private Node right;
+    	   
+    	public int getValue() {
+			return value;
+		}
+
+
+		public void setValue(int value) {
+			this.value = value;
+		}
+
+
+		public Node getLeft() {
+			return left;
+		}
+
+
+		public void setLeft(Node left) {
+			this.left = left;
+		}
+
+
+		public Node getRight() {
+			return right;
+		}
+
+
+		public void setRight(Node right) {
+			this.right = right;
+		}
+		
+		public Node(int x)
+    	 { value=x; left = right = null; } 
+  
+		
+		
+    	   
+     }
+
+
+
+	
+     
+    
+
+}

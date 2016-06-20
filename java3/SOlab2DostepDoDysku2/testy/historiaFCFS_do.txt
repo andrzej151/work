@@ -1,0 +1,11 @@
+Z 1 DO 24
+Z 24 DO 8
+Z 8 DO 3
+Z 3 DO 15
+Z 15 DO 32
+Z 32 DO 48
+Z 48 DO 6
+Z 6 DO 33
+Z 33 DO 18
+Z 18 DO 9
+Suma przesuniec: 182

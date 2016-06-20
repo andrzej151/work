@@ -1,0 +1,71 @@
+package Procesy;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int menu=0;
+		Symulacja sym=new Symulacja();
+		Scanner odczyt = new Scanner(System.in);
+		
+		do
+		{
+			System.out.println("Witaj co chcesz zrobic?");
+			System.out.println("1-Wprowac liste procesow z klawiatury");
+			System.out.println("2-Plik tekstowy z danymi symulacji");
+			System.out.println("3-Algorytm FCFS");
+			System.out.println("4-Algorytm SJF z wywlaszczeniem");
+			System.out.println("5-Algorytm SJF bez wywlaszczenia");
+			System.out.println("6-Algorytm Rotacyjny");
+			System.out.println("7-Zapis do pliku");
+			System.out.println("8-Wyswietl liste procesow");
+			System.out.println("0-Koniec");
+			menu=odczyt.nextInt();
+			
+			switch (menu) {
+			case 1:
+				sym.wprowadzProcesyRecznie();
+				break;
+				
+			case 2:
+				sym.wczytajplik();
+				break;
+				
+			case 3:
+				System.out.println("Algorytm FCFS");
+				sym.FCFS();
+				break;
+				
+			case 4:
+				System.out.println("4-Algorytm SJF z wywlaszczeniem");
+				break;
+				
+			case 5:
+				
+				System.out.println("5-Algorytm SJF bez wywlaszczenia");
+				sym.SJFbezWywlaszczenia();
+				break;
+			case 6:
+				System.out.println("Algorytm Rotacyjny");
+				System.out.println("Podaj kawant danych");
+				int n=odczyt.nextInt();
+				sym.rotacyjny(n);
+				break;
+			case 7:
+				sym.zapis();
+				break;
+			case 8:
+				sym.wyswietl();
+				break;
+
+			default:
+				break;
+			}
+			
+		}while(menu!=0);
+		
+	}
+
+}

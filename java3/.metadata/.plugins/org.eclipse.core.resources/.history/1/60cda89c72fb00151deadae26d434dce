@@ -1,0 +1,287 @@
+package Dysk;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.Scanner;
+
+public class Symulacja implements Symulacje{
+
+	LinkedList listaDanych;//niezmienna podzczas algorytmu
+	LinkedList listaWykonywanych;//wykonwane dane dysk je widzi
+	LinkedList listaOczekujacych;//kolejka oczekujacych jescze nie ich czas dodania
+	LinkedList listaZROBIONYCH;//wykonwane potrzebne do historii
+	int [] dysk;
+	int czas_sym;
+	
+	
+	public Symulacja() {
+		
+		
+	}
+	
+	
+	public void WprowacDaneRecznie() {
+		
+		Scanner odczyt = new Scanner(System.in);
+		System.out.println("Wielkosc dysku");
+		int wielkosc=odczyt.nextInt();
+		//System.out.println("Modywikowaæ 1 tak 0 nie");
+		//int zmiany=odczyt.nextInt();
+		dysk=new int[wielkosc];
+		for(int i=0;i<dysk.length;i++)
+		{
+			dysk[i]=i*2;
+		}
+		System.out.println("ilosc procesow");
+		wielkosc=odczyt.nextInt();
+		Proces p=new Proces(3, 2);
+		System.out.println(p);
+		for(int i=0;i<wielkosc;i++)
+		{
+			
+			p.los(dysk.length, 50, 0);
+			listaDanych.add(p);
+		}
+		
+		for(int i=0;i<listaDanych.size();i++)
+		{
+			System.out.println(listaDanych.get(i));
+		}
+		
+	}
+
+	
+	public void WprowacPlik(String nazwa) {
+		try {
+			Scanner odczyt = new Scanner(new File(nazwa));
+			dysk=new int[odczyt.nextInt()];
+			for(int i=0;i<dysk.length;i++)
+			{
+				dysk[i]=i;
+						
+			}
+			int ilosc=odczyt.nextInt();
+			listaDanych=new LinkedList();
+			int adres,czas,dedlin;
+			for(int i=0;i<ilosc;i++)
+			{
+				adres=odczyt.nextInt();
+				czas=odczyt.nextInt();
+				dedlin=odczyt.nextInt();
+				listaDanych.add(new Proces(adres,czas,dedlin));
+						
+			}
+			if(ilosc==listaDanych.size())
+			{
+				System.out.println("Wczytano");
+				System.out.println();
+				for(int i=0;i<listaDanych.size();i++)
+				{
+					
+					System.out.println(listaDanych.get(i));
+							
+				}
+				
+			}
+			else
+			{
+				System.out.print("NIE Wczytano");
+			}
+				
+				
+			odczyt.close();
+		} catch (FileNotFoundException e) {
+			
+			e.printStackTrace();
+		}
+		
+		
+	}
+
+	
+	public void Zapisz(String nazwa) {
+		PrintWriter zapis;
+		try {
+			zapis = new PrintWriter(nazwa);
+			zapis.println(dysk.length);
+			zapis.println(listaDanych.size());
+			for(int i=0;i<listaDanych.size();i++)
+			{
+				zapis.println(((Proces)listaDanych.get(i)).zapis());
+			}
+			zapis.close();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+	}
+
+
+	public void Wyswietl() {
+		System.out.println();
+		for(int i=0;i<listaDanych.size();i++)
+		{
+			
+			System.out.println(listaDanych.get(i));
+					
+		}
+		System.out.println();
+		
+	}
+
+	
+	public void Podsumowanie() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	public void los() {
+		
+			Scanner odczyt = new Scanner(System.in);
+			
+			System.out.println("podaj max wielkosc dysku");
+			int wielkosc_dysku=odczyt.nextInt();
+			
+			dysk=new int[wielkosc_dysku];
+			for(int i=0;i<dysk.length;i++)
+			{
+				dysk[i]=i;
+						
+			}
+			System.out.println("Do jakiej liczby ograniczyc losowanie dodawania procesow");
+			int ogranic_czas=odczyt.nextInt();
+			System.out.println("Do jakiej liczby ograniczyc losowanie dedlinow");
+			int ded=odczyt.nextInt();
+			System.out.println("Ile procesow wylosowac");
+			int ilosc=odczyt.nextInt();
+			
+			listaDanych=new LinkedList();
+			Proces p;
+			for(int i=0;i<ilosc;i++)
+			{
+				p=new Proces();
+				p.los(wielkosc_dysku, ogranic_czas, ded);
+				listaDanych.add(p);
+						
+			}
+			
+				System.out.println("Wylosowano");
+				Wyswietl();
+				
+				
+	}
+	
+	public void zwieksz_czas()
+	{
+		czas_sym++;
+	
+		for(int i=0;i<listaOczekujacych.size();i++)
+		{
+			if(((Proces)listaOczekujacych.get(i)).getCzasDodaia()==czas_sym){
+			listaWykonywanych.add((Proces)listaOczekujacych.delete(i));
+			
+			//System.out.println(listaOczekujacych.size()+" "+listaWykonywanych.size());
+			//System.out.println(((Proces)listaWykonywanych.get(listaWykonywanych.size()-1)));
+			}
+		}
+	}
+
+	public void FCFSbezCz(String nazwa) {
+		//przygotowanie bez czasow
+		PrintWriter zapis;
+		try {
+			zapis = new PrintWriter(nazwa);
+		listaWykonywanych=new LinkedList();
+		listaZROBIONYCH=new LinkedList();
+		int sumaprzesuniec=0;
+		
+		for(int i=0;i<listaDanych.size();i++)
+		{
+			listaWykonywanych.add(((Proces)listaDanych.get(i)));
+		}
+		
+		//Algorytm
+		Proces aktualny=new Proces(1, 1);
+		Proces nastepny;
+		
+			while(!listaWykonywanych.isEmpty())
+			{
+				nastepny=(Proces)listaWykonywanych.delete(0);
+				nastepny.wykonaj(czas_sym);
+				listaZROBIONYCH.add(nastepny);
+				sumaprzesuniec+=Math.abs(aktualny.getadres()-nastepny.getadres());
+				System.out.println("Z "+aktualny.getadres()+" DO "+nastepny.getadres());
+				zapis.println("Z "+aktualny.getadres()+" DO "+nastepny.getadres());
+				aktualny=nastepny;
+			}
+			zapis.println("Suma przesuniec: "+sumaprzesuniec);
+		System.out.println("Suma przesuniec: "+sumaprzesuniec);
+		zapis.close();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+
+	public void SSTFbezCz(String nazwa) {
+		PrintWriter zapis;
+		try {
+			zapis = new PrintWriter(nazwa);
+			listaWykonywanych=new LinkedList();
+			listaZROBIONYCH=new LinkedList();
+			int sumaprzesuniec=0;
+			
+			for(int i=0;i<listaDanych.size();i++)
+			{
+				listaWykonywanych.add(((Proces)listaDanych.get(i)));
+			}
+			
+			//Algorytm
+			Proces aktualny=new Proces(1, 1);
+			Proces nastepny;
+				
+			int najblizszy_adres;
+			int nrNaLiscie;
+				while(!listaWykonywanych.isEmpty())
+				{
+					nrNaLiscie=0;
+					nastepny=(Proces)listaWykonywanych.get(nrNaLiscie);
+					najblizszy_adres=Math.abs(aktualny.getadres()-nastepny.getadres());
+					for(int i=1;i<listaWykonywanych.size();i++)
+					{
+						nastepny=(Proces)listaWykonywanych.get(i);
+						if(Math.abs(aktualny.getadres()-nastepny.getadres())<najblizszy_adres)
+						{
+							nrNaLiscie=i;
+							najblizszy_adres=aktualny.getadres()-nastepny.getadres();
+						}
+					}
+					nastepny=(Proces)listaWykonywanych.delete(nrNaLiscie);
+					nastepny.wykonaj(czas_sym);
+					listaZROBIONYCH.add(nastepny);
+					sumaprzesuniec+=Math.abs(aktualny.getadres()-nastepny.getadres());
+					System.out.println("Z "+aktualny.getadres()+" DO "+nastepny.getadres());
+					zapis.println("Z "+aktualny.getadres()+" DO "+nastepny.getadres());
+					aktualny=nastepny;
+				}
+				zapis.println("Suma przesuniec: "+sumaprzesuniec);
+				System.out.println("Suma przesuniec: "+sumaprzesuniec);
+				zapis.close();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	}
+
+}

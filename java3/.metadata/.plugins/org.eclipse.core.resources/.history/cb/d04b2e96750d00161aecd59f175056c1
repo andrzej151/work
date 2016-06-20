@@ -1,0 +1,126 @@
+package Drzewa;
+
+public class Drzewo {
+	Node _root;
+	
+	public Drzewo()
+	{
+		
+	}
+	public void insert(int x)
+    {
+		System.out.println(x);
+		_root= insert(x,_root); }
+    
+    protected Node insert(int x, Node t) {
+      if(t== null) t=new Node(x);
+      else 
+      { 
+    	 
+             if(x<t.value) t.left=insert(x,t.left);
+             else if(x>t.value) t.right=insert(x,t.right);
+			else
+				try {
+					throw new Exception("jest juz taki klucz");
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+            }       
+      return t;
+  }
+
+    public Object find(int x)
+    {
+    	Node t = search(x);
+    	return t !=null ? t.value : null;
+    }
+    
+    public void findnext(int klucz) {
+    	Node t = search(klucz);
+    	System.out.println("po kluczu "+t.value+" jest "+t.left+" i "+t.right);
+		
+	}
+    
+    public Object findpop(int x)
+    {
+    	Node t = searchpop(x);
+    	return t !=null ? t.value : null;
+    }
+    
+    private Node search(int value) {
+        Node node = _root;
+        int cmp=0;
+        while (node != null &&(cmp = value-node.value)!=0)
+           node = cmp < 0 ? node.left : node.right;
+         return node;
+    }
+
+   
+        
+    private Node searchpop(int value) {
+        Node node = _root;
+        Node nodepop = null;
+        int cmp=0;
+        while (node != null &&(cmp = value-node.value)!=0)
+        {
+        	nodepop=node;
+           node = cmp < 0 ? node.left : node.right;
+           
+        }
+         return nodepop;
+    }
+
+    
+    
+    //pomocnicza klasa node
+     class Node
+     {
+    	 private int value;
+    	   private Node left;
+    	   private Node right;
+    	   
+    	public Object getValue() {
+			return value;
+		}
+
+
+		public void setValue(int value) {
+			this.value = value;
+		}
+
+
+		public Node getLeft() {
+			return left;
+		}
+
+
+		public void setLeft(Node left) {
+			this.left = left;
+		}
+
+
+		public Node getRight() {
+			return right;
+		}
+
+
+		public void setRight(Node right) {
+			this.right = right;
+		}
+		
+		public Node(int x)
+    	 { value=x; left = right = null; } 
+  
+		
+		
+    	   
+     }
+
+
+
+	
+     
+    
+
+}

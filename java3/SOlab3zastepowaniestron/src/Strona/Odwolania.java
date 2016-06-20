@@ -1,0 +1,52 @@
+package Strona;
+
+import java.util.Random;
+
+
+
+public class Odwolania {
+	private int czas;
+	private int miejsce;
+	
+	public Odwolania() {
+		czas=0;
+		miejsce=0;
+	}
+	public Odwolania(int los) {
+		czas=0;
+		miejsce=0;
+		los(los);
+	}
+	
+	public void los(int maxdysku)
+	{
+		Random generator=new Random();
+		miejsce=generator.nextInt(maxdysku)+1;
+	}
+	public void wykonaj(int czas)
+	{
+		this.czas=czas;
+	}
+	
+	
+	public String toString() {
+		
+		return "Odwolanie do "+miejsce+" wykonane w chwili "+czas;
+	}
+
+	public int getCzas() {
+		return czas;
+	}
+
+	public void setCzas(int czas) {
+		this.czas = czas;
+	}
+
+	public int getMiejsce() {
+		return miejsce;
+	}
+
+	public void setMiejsce(int miejsce) {
+		this.miejsce = miejsce;
+	}
+}

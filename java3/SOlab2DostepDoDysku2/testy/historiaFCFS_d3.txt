@@ -1,0 +1,11 @@
+Z 1 DO 13
+Z 13 DO 48
+Z 48 DO 49
+Z 49 DO 19
+Z 19 DO 19
+Z 19 DO 31
+Z 31 DO 45
+Z 45 DO 29
+Z 29 DO 11
+Z 11 DO 27
+Suma przesuniec: 154

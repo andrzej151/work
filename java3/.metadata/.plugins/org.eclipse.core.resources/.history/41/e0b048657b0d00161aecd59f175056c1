@@ -1,0 +1,106 @@
+package Drzewa;
+
+import java.util.Scanner;
+
+public class SrodowiskoDrzew  {
+
+	Drzewo d;
+	int klucz;
+	
+	public SrodowiskoDrzew() {
+		d=new Drzewo();
+	}
+	public void wstaw() {
+		Scanner o=new Scanner(System.in);
+		System.out.println("Co wstawic");
+		klucz=o.nextInt();
+		d.insert(klucz);
+		
+	}
+
+	public void wyswietlINOrder() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void wyswietlPREOrder() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void wyswietlPOSTOrder() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void wyswietlPozioami() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void wysokosc() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void liczbalisci() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void liczbawezlowWEW() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void liczbawezlowZEW() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void min() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void max() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void wyswietlInOrder(int klucz) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void znajdznext() {
+		Scanner o=new Scanner(System.in);
+		System.out.println("podaj klucz");
+		klucz=o.nextInt();
+		d.findnext(klucz);
+		
+	}
+
+	public void znajdzpop() {
+		Scanner o=new Scanner(System.in);
+		System.out.println("podaj klucz");
+		klucz=o.nextInt();
+		System.out.println("przed kluczem "+klucz+" jest "+d.findpop(klucz));
+	}
+
+	public void usun(int kluczc) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void rysuj() {
+		// TODO Auto-generated method stub
+		
+	}
+	public void znajdz(int klucz) {
+		System.out.println(d.find(klucz));
+		
+	}
+	
+	
+}

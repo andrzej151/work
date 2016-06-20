@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename method &apos;Procesy.Symulacja.wystabpro()&apos; to &apos;podzialczas&apos;&#x0D;&#x0A;- Original project: &apos;SOlab1Procesy&apos;&#x0D;&#x0A;- Original element: &apos;Procesy.Symulacja.wystabpro()&apos;&#x0D;&#x0A;- Renamed element: &apos;Procesy.Symulacja.podzialczas()&apos;&#x0D;&#x0A;- Update references to refactored element" delegate="false" deprecate="false" description="Rename method &apos;wystabpro&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.method" input="/src&lt;Procesy{Symulacja.java[Symulacja~wystabpro" name="podzialczas" references="true" stamp="1457541411017" version="1.0"/>
+</session>

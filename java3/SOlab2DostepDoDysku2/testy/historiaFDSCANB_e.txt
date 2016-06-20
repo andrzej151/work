@@ -1,0 +1,11 @@
+Z 1 DO 3
+Z 3 DO 6
+Z 6 DO 8
+Z 8 DO 18
+Z 18 DO 27
+Z 27 DO 31
+Z 31 DO 37
+Z 37 DO 6
+Z 6 DO 35
+Z 35 DO 46
+Suma przesuniec: 107

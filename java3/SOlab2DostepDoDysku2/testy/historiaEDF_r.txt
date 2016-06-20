@@ -1,0 +1,15 @@
+Z 1 DO 3
+Z 3 DO 25
+Z 25 DO 1
+Z 1 DO 40
+Z 40 DO 13
+Z 13 DO 42
+Z 42 DO 48
+Z 48 DO 49
+Z 49 DO 47
+Z 47 DO 23
+Z 23 DO 13
+Z 13 DO 1
+Z 1 DO 39
+Z 39 DO 32
+Suma przesuniec: 243

@@ -1,0 +1,11 @@
+Z 1 DO 1
+Z 1 DO 3
+Z 3 DO 6
+Z 6 DO 30
+Z 30 DO 34
+Z 34 DO 41
+Z 41 DO 41
+Z 41 DO 44
+Z 44 DO 45
+Z 45 DO 1
+Suma przesuniec: 88

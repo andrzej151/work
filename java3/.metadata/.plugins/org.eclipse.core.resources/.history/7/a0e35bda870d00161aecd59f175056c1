@@ -1,0 +1,125 @@
+package Drzewa;
+
+public class Drzewo2 {
+	Node _root;
+	Comparator _comparator;
+	
+	public Object find(Object x)
+    {Node t = search(x);
+     return t !=null ? t.value : null;
+    }
+        
+    private Node search(Object value) {
+        Node node = _root;
+        int cmp=0;
+        while (node != null &&(cmp = _comparator.compare(value, node.value))!=0)
+           node = cmp < 0 ? node.left : node.right;
+         return node;
+    }
+    
+    public void insert(Object x)
+    { _root= insert(x,_root); }
+    
+    protected Node insert(Object x, Node t) {
+      if(t== null) t=new Node(x);
+      else { int cmp=_comparator.compare(x,t.value);
+             if(cmp<0) t.left=insert(x,t.left);
+             else if(cmp>0) t.right=insert(x,t.right);
+			else
+				try {
+					throw new Exception(x.toString());
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+            }       
+      return t;
+  }
+
+
+    public void delete(Object x)
+    {_root=delete(x,_root); }
+    
+    protected Node delete(Object x, Node t) {
+      if(t==null)
+		try {
+			throw new Exception(x.toString());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	else { int cmp=_comparator.compare(x,t.value);
+             if(cmp<0) t.left=delete(x,t.left);
+             else if(cmp>0) t.right=delete(x,t.right);
+                  else if(t.left!=null &&t.right!=null)
+                            t.right=detachMin(t.right,t); 
+                       else  t = (t.left != null) ? t.left : t.right;
+            }           
+      return t;
+    }  
+   
+//zast¹p usuwany element jego nastêpnikiem i usuñ nastêpnik
+  
+    protected Node detachMin(Node t, Node del) {
+      if(t.left!=null) t.left=detachMin(t.left,del);   
+      else {del.value=t.value; t=t.right;}
+      return t;
+    }
+
+    
+    
+    //pomocnicza klasa node
+     class Node
+     {
+    	 private Object value;
+    	   private Node left;
+    	   private Node right;
+    	   
+    	public Object getValue() {
+			return value;
+		}
+
+
+		public void setValue(Object value) {
+			this.value = value;
+		}
+
+
+		public Node getLeft() {
+			return left;
+		}
+
+
+		public void setLeft(Node left) {
+			this.left = left;
+		}
+
+
+		public Node getRight() {
+			return right;
+		}
+
+
+		public void setRight(Node right) {
+			this.right = right;
+		}
+		
+		public Node(Object x)
+    	 { value=x; left = right = null; } 
+  
+		public int compareTo(Node left, Node right)
+		{
+			return (int)left.getValue()-(int)right.getValue();
+		}
+		
+    	   
+     }
+     
+     private class Comparator
+     {
+    	    public int compare(Object left, Object right) throws ClassCastException 
+    	    { return ((Comparable) left).compareTo(right); }
+
+     }
+
+}

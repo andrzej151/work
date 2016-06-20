@@ -1,0 +1,3 @@
+Z 1 DO 47
+Z 47 DO 18
+Suma przesuniec: 75
