@@ -1,0 +1,77 @@
+id;firma;czesc;branza;sektor;obecna
+17;enxoo sp. z o.o.;I cz©òÜ;;0;0
+76;Inter Cars S.A.;II cz©òÜ;;0;0
+2;KÑmmerer Polska ;I / II cz©òÜ;automotive;A;1
+1;ceneo;I cz©sÜ;;A;1
+3;3M Wrocàaw Sp. z o.o.;I cz©òÜ;Produkcja;A;1
+4;ALUMECO SERVICE Sp. z o.o.;I cz©òÜ;SSC, inæynieria, produkcja;A;1
+33;SoftServe Poland;I cz©òÜ;IT;A;1
+40;Axxiome Polska Sp. z o. o.;II cz©òÜ;;A;0
+41;Bank Zachodni WBK;II cz©òÜ;BankowoòÜ i finanse;A;0
+42;BPX S.A.;II cz©òÜ;IT/Konsulting/ERP/BI;A;0
+43;Cargill Poland Sp. z o.o.;II cz©òÜ;Produkcja/rolnictwo;A;0
+6;Astrum MH;I cz©òÜ;Elektroenergetyka;B;1
+7;Atos IT Services Sp. z o.o.;I cz©òÜ;IT;B;1
+8;BNY Mellon Sp. z o.o.;I cz©òÜ;BankowoòÜ Inwestycyjna;B;1
+9;Capgemini Software Solutions Center ;I cz©òÜ;IT;B;1
+44;Clearcode;II cz©òÜ;IT;B;0
+45;CrazyCall;II cz©òÜ;IT;B;0
+46;DataArt;II cz©òÜ;IT;B;0
+47;Divante Sp. z o.o.;II cz©òÜ;IT/e-commerce;B;0
+10;Centrum Usàug Informatycznych we Wrocàawiu;I cz©òÜ;IT, Informatyczna;C;1
+11;Centrum Zdrowia WroMedica;I cz©òÜ;biotechnologiczna, farmaceutyczna;C;1
+12;Credit Suisse;I cz©òÜ;bankowoòÜ;C;1
+13;Danfoss Power Solutions sp. z o.o.;I cz©òÜ;Produkcja;C;1
+48;Elica Group Polska Sp. z o.o.;II cz©òÜ;Produkcja AGD;C;0
+49;Euro Bank S.A.;II cz©òÜ;Finanse/bankowoòÜ;C;0
+50;Faurecia;II cz©òÜ;motoryzacja, produkcja;C;0
+51;FIBRAIN Sp. z o.o.;II cz©òÜ;Telekomunikacyjna;C;0
+14;DK Marketing;I cz©òÜ;Call center;D;1
+15;docFlow S.A.;I cz©òÜ;USùUGOWA - zarz•dzanie danymi i dokumentami;D;1
+16;Dolnoòl•ski Wojew¢dzki Urz•d Pracy Centrum Informacji i Planowania Kariery Zawodowej;I cz©òÜ;;D;1
+34;Tornos Technologies Poland Sp. z o.o.;I cz©òÜ;Obr¢bka metalu;D;1
+38;vm.pl;I cz©òÜ;IT;D;1
+52;Fortaco Sp. z o.o.;II cz©òÜ;Produkcja ;D;0
+53;GRUPA INCO S.A. Zakàad Produkcyjny w Borowie;II cz©òÜ;Produkcjna;D;0
+54;Grupa Unity;II cz©òÜ;IT e-commerce;D;0
+55;IBM Client Innovation Center;II cz©òÜ;IT ;D;0
+56;Ku´nia Ostr¢w Wielkopolski Sp. z o.o.;II cz©òÜ;metalowa;D;0
+18;EY DGN Poland;I cz©òÜ;Audyt, doradztwo podatkowo-finansowe, IT;E;1
+57;LEONI Kabel Polska Sp. z o.o. ;II cz©òÜ;Automotive;E;0
+19;Hewlett Packard Enterprise;I cz©òÜ;Business service;F;1
+58;LG Chem Polans sp.z o.o.;II cz©òÜ;Produkcja tworzyw sztucznych;F;0
+20;IKEA;I cz©òÜ;Retail;G;1
+21;Kruk S.A.;I cz©òÜ;Finansowa;G;1
+22;LEDIKO Sp. z o.o.;I cz©òÜ;Projektowanie i produkcja oòwietlania typu LED;G;1
+23;ManpowerGroup Sp. z o.o.;I cz©òÜ;Branæa HR - doradztwo personalne, rekrutacja staàa oraz tymczasowa;G;1
+59;McKinsey Knowledge Center Poland Sp. z o.o.,;II cz©òÜ;Research and Analytics ;G;0
+60;Micro Solutions Sp. z o.o. Sp. k.;II cz©òÜ;IT;G;0
+61;NetTeam Solutions S.A.;II cz©òÜ;IT;G;0
+62;NG Engineering Sp. z o.o. ;II cz©òÜ;Usàugi inæynieryjne w branæy:motoryzacja, transport publiczny, przemysà ci©æki, oprzyrz•dowanie produkcyjne, AGD ;G;0
+26;PM Group;II cz©òÜ;Producent maszyn papierniczych;G;0
+5;Amazon;I cz©òÜ;Logistyka;H;1
+24;myPhone Sp. z o.o.;I cz©òÜ;Elektronika uæytkowa;H;1
+25;Nestle Polska S.A. oddziaà Purina;I cz©òÜ;Spoæywcza;H;1
+27;Pneumat System Sp. z o.o.;I cz©òÜ;pneumatyczna;H;1
+35;TORRECID SA;I cz©òÜ;CERAMICZNA;H;1
+63;NOKIA;II cz©òÜ;IT;H;0
+64;PCC Rokita SA ;II cz©òÜ;Chemia, Inæynieria, Produkcja;H;0
+65;Perfecta Sp. z o.o. Sp.k.;II cz©òÜ;reklama;H;0
+66;PGB Human Resources;II cz©òÜ;Agencja Rekrutacyjna;H;0
+72;Sodexo Polska;II cz©òÜ;Facility Management / techniczna obsàuga nieruchomoòci;H;0
+28;QMAF Sp. z o.o.;I cz©òÜ;Inæynieria jakoòci, Zarz•dzanie produkcj•;I;1
+29;RST IT;I cz©òÜ;IT - Rozw¢j oprogramowania;I;1
+30;RW Swiss Automation sp. z o.o.;I cz©òÜ;Automotive;I;1
+31;Ryanair / Travel Labs Poland Sp. z o.o. ;I cz©òÜ;IT;I;1
+36;Trenkwalder;I cz©òÜ;Agencja Pracy;I;1
+37;UNIBEP S.A.;I cz©òÜ;Budownictwo;I;1
+67;PROCOM SYSTEM S.A.;II cz©òÜ;Automatyka;I;0
+68;PwC;II cz©òÜ;Consulting;I;0
+69;REC a GlobalLogic Company;II cz©òÜ;IT;I;0
+70;Robert Bosch Sp. z o.o.;II cz©òÜ;Automotive;I;0
+71;Schneider Electric Energy Poland Sp. z o.o. Zakàad Automatyki i System¢w Elektroenergetycznych w ówiebodzicach;II cz©òÜ;Energetyka;I;0
+73;Stelweld Sp. z o.o.;II cz©òÜ;Produkcja;I;0
+32;Simoldes Plasticos Polska Sp. z o.o.;I cz©òÜ;Produkcja, automotiv;J;1
+74;Strabag Infrastruktura Poàudnie Sp.zo.o.;II cz©òÜ;infrastruktura drogowa;J;0
+39;WHITE HATS;I cz©òÜ;IT;K;1
+75;Wrocàawski Park Technologiczny SA;II cz©òÜ;;K;0
