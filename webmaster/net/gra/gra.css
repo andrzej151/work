@@ -1,0 +1,208 @@
+body 
+{
+	background: #0000AA url("img/blue.jpg") ;
+	background-repeat: repeat-y repeat-x;
+	color: lightgrey;
+	font-size: 20px;
+	font-family: 'Inconsolata';
+	font-weight: 700;
+
+}
+
+#pojemnik
+{
+	width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#menu
+{
+	width: 896px;
+	height:196px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color:#000099;
+	border:solid 2px #000000;
+}
+
+#text
+{
+	width: 900px;
+	height:400px;
+
+	background-color:#000099;
+	
+}
+#m2
+{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+	width: 896px;
+	height:90px;
+}
+
+#pytanie
+{
+	width: 596px;
+	text-align: center;
+	font-size: 28px;
+	min-height: 90px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+	background-color:#0022AA;
+	border-bottom:dotted yellow 2px;
+	border-left:dotted yellow 2px;
+	border-right:dotted yellow 2px;
+	
+}
+
+#mysl
+{
+	height:85px;
+	float: left;
+	width: 250px;
+	text-align: center;
+	font-size: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 5px;
+	
+}
+
+#czas
+{
+	padding-top:15px;
+	height:85px;
+	float: left;
+	width: 200px;
+	text-align: center;
+	font-size:32px;
+	
+}
+#y
+{
+	background-color:yellow;
+}
+#r
+{
+	background-color:red;
+}
+#g
+{
+	background-color:green;
+}
+
+#runda
+{
+	height:85px;
+	float: left;
+	width: 200px;
+	text-align: center;
+	padding-top:15px;
+	font-size:32px;
+	
+}
+
+#stop
+{
+	height:95px;
+	float: left;
+	width: 50px;
+	text-align: center;
+	color:#555555;
+	background-color:#990000;
+	border:solid 2px #000000;
+	transition-duration:4s;
+	
+}
+
+#stop:hover
+{
+	height:95px;
+	float: left;
+	width: 50px;
+	text-align: center;
+	background-color:#FF0000;
+	border:solid 2px #AAAAAA;
+}
+
+#start
+{
+	height:95px;
+	float: left;
+	width: 50px;
+	text-align: center;
+	color:black;
+	background-color:#009900;
+	border:solid 2px #000000;
+	transition-duration:4s;
+	font-size:16px;
+	
+}
+
+#start:hover
+{
+	height:95px;
+	float: left;
+	width: 50px;
+	text-align: center;
+	background-color:#00FF00;
+	border:solid 2px #AAAAAA;
+	font-size:16px;
+}
+
+#pole1
+{
+	float: left;
+	width: 446px;
+	height: 392px;
+	background-color: #0000AA;
+	border:solid 2px #FFFFFF;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+}
+
+#pole2
+{
+	float: left;
+	width: 446px;
+	height: 392px;
+	background-color: #0000AA;
+	border:solid 2px #FFFFFF;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+}
+
+#pole3
+{
+	float: left;
+	width: 446px;
+	height: 392px;
+	background-color: #0000AA;
+	border:solid 2px #FFFFFF;
+	text-align:center;
+	font-size: 100px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#pole4
+{
+	float: left;
+	width: 446px;
+	height: 392px;
+	background-color: #0000AA;
+	border:solid 2px #FFFFFF;
+	text-align:center;
+	font-size: 100px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
