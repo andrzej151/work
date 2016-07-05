@@ -69,11 +69,11 @@
 </head>
 
 <body ng-app='myApp'>
-	<img src="img/mapa.png">
+	
 <div class="container">
+	
 		<div class="col-lg-8 center-block" ng-controller='ProjCon'>
-			<h1></h1>
-			<br/>
+			<img src="img/mapa.png" class="col-lg-8 center-block"  >
 			<input type="text" class="form-control" placeholder="Czego szukasz?" ng-model="wyszukiarka">
 			
 				<table class="table table-striped table-bordered table-hover">

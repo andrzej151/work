@@ -67,7 +67,7 @@
 <body >
 		<div>
 					<h1>Zapisano</h1>
-					<a href="miejsca.php"><button type="button" class="btn btn-danger  ">Powrót</button></a>
+					<a href="rejestracja.php"><button type="button" class="btn btn-danger  ">Powrót</button></a>
 					
 	
 		</div>
