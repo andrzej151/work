@@ -20,7 +20,7 @@
 				$polaczenie->set_charset("utf8");
 				$miejsce=$_GET['o'];
 
-				$lista = $polaczenie->query("UPDATE `bkmiejsca` SET zajeta=1 WHERE id='$miejsce'" ); 
+				$lista = $polaczenie->query("UPDATE `Bkmiejsca` SET zajete=1 WHERE id='$miejsce'" ); 
 			
 					
 				$polaczenie->close();
