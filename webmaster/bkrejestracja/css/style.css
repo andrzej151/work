@@ -1,0 +1,32 @@
+.wolne
+{
+	display: block;
+	width: 40;
+	height: 40;
+	position: absolute;
+	background-color: #00ff00;
+	text-align: center;
+	
+
+}
+
+.zajete
+{
+	display: block;
+	width: 40;
+	height: 40;
+	position: absolute;
+	background-color: #ff0000;
+	text-align: center;
+
+}
+
+.wybrane
+{
+	display: block;
+	width: 40;
+	height: 40;
+	position: absolute;
+	background-color: #0000ff;
+	text-align: center;
+}
