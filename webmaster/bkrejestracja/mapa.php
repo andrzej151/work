@@ -1,3 +1,13 @@
+<?php
+session_start();
+if(!isset($_POST['firma']))
+{
+	header('Location: firma.php');
+		exit();
+}
+$_SESSION['firma'] = $_POST['firma'];
+
+?>
 
 <!DOCTYPE HTML>
 <html lang="pl">
@@ -13,6 +23,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	
 	<link rel="stylesheet" href="css/style.css" type="text/css" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 	<script type="text/javascript" src="js/mapa.js"></script>
 </head>
@@ -22,14 +33,24 @@
 			<div id="naglowek">
 				<h1>Wybierz miejsce</h1>
 			</div>
-			<div id="parter">
-				<h2>Parter</h2>
-				<img src="img/m.png" width="600" heigth="400">
+			<div class="col-lg-10">
+				<div id="parter" class="col-lg-6">
+					<h2>Parter</h2>
+					<img src="img/m.png" width="600" heigth="400" alt="Wybierz"  >
+				</div>
+				<div id="parternotatka" class="col-lg-4">
+
+				</div>
+
 			</div>
-			<div id="antresola">
-				<h2>antresola</h2>
-			</div>
-			<div id="legenda">
+			<div class="col-lg-10">
+				<div id="antresola" class="col-lg-6">
+					<h2>Antresola</h2>
+					<img src="img/m.png" width="600" heigth="400" alt="Wybierz"  >
+				</div>
+				<div id="antresolanotatka" class="col-lg-4">
+
+				</div>
 			</div>
 	</div>
 	
