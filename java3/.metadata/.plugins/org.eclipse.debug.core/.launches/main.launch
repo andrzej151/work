@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/SOlab5procesoryrozproszone/src/Procesory/Main.java"/>
+<listEntry value="/TestPraca/src/MatDskr/Main.java"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
 </listAttribute>
-<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="Procesory.Main"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="SOlab5procesoryrozproszone"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="MatDskr.Main"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="TestPraca"/>
 </launchConfiguration>
